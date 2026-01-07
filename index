@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conor Glackin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#">Conor Glackin</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <img class="avatar" src="profile.jpg" alt="Portrait of Conor Glackin" />
+      <div>
+        <h1>Hi there!</h1>
+        <p class="lead">Write a short 1–2 sentence intro about what you do.</p>
+        <p class="links">
+          <a href="https://github.com/Conor7896">GitHub</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/">LinkedIn</a>
+          <span>•</span>
+          <a href="mailto:you@email.com">Email</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>Add a short bio here.</p>
+    </section>
+
+    <section id="work" class="card">
+      <h2>Education & Experience</h2>
+      <ul>
+        <li><strong>Role</strong> — Place, Years</li>
+        <li><strong>Role</strong> — Place, Years</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Publications & Presentations</h2>
+      <ul>
+        <li>Paper / talk — link</li>
+        <li>Paper / talk — link</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Just for fun</h2>
+      <p>Add hobbies / fun facts here.</p>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Conor Glackin</footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
