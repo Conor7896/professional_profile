@@ -25,4 +25,8 @@ h1 { margin: 0 0 8px; font-size: 40px; }
   .hero { grid-template-columns: 1fr; text-align:center; }
   .avatar { margin: 0 auto; }
   nav { display:none; }
+  nav a.active {
+  text-decoration: underline;
+}
+
 }
