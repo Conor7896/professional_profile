@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conor Glackin | Education</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">Conor Glackin</a>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="phd.html">PhD</a>
+        <a href="work.html">Work Experience</a>
+        <a href="publications.html">Publications</a>
+        <a class="active" href="education.html">Education</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h1>Education</h1>
+      <ul>
+        <li>
+          <strong>PhD</strong> — Leibniz Institute for Baltic Sea Research, Rostock, Germany (2022–2026)<br />
+          <em>Thesis:</em> Quantification, Prediction and Forecasting of <em>Vibrio vulnificus</em> in the Southern Baltic Sea Using High-Resolution Data
+        </li>
+        <li>
+          <strong>MSc in Computational Genomics</strong> — NUI Galway, Ireland (2018–2019) — Grade: 2.1<br />
+          <em>Thesis:</em> Predicting Links in Gene Regulatory Networks from other Networks
+        </li>
+        <li>
+          <strong>BSc in Mathematics</strong> — NUI Galway, Ireland (2014–2018) — Grade: 2.1 (Thesis: 1.1)<br />
+          <em>Thesis:</em> Determinants of Wartime Success
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Conor Glackin</footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
