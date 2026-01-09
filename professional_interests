@@ -1,4 +1,4 @@
-<section class="card">
+<section class="card", id="professional_interests">
   <h2>Professional Interests</h2>
   <p>
     I have a strong interest in time-series analysis, particularly in the context
