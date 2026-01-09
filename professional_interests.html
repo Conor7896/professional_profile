@@ -1,9 +1,42 @@
-<section class="card"">
-  <h2>Professional Interests</h2>
-  <p>
-    I have a strong interest in time-series analysis, particularly in the context
-    of environmental and biological data, and enjoy working with sequential data
-    to understand patterns, dynamics, and predictive behaviour over time.
-  </p>
-</section>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conor Glackin | Professional Interests</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Conor Glackin</a>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="phd.html">PhD</a>
+      <a href="work.html">Work Experience</a>
+      <a href="publications.html">Publications</a>
+      <a href="education.html">Education</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h1>Professional Interests</h1>
+    <p>
+      I have a strong interest in time-series analysis, particularly in the context
+      of environmental and biological data, and enjoy working with sequential data
+      to understand patterns, dynamics, and predictive behaviour over time.
+    </p>
+  </section>
+
+  <footer class="footer">© <span id="y"></span> Conor Glackin</footer>
+</main>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
