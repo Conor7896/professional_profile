@@ -131,3 +131,12 @@ h1 { margin: 0 0 8px; font-size: 40px; }
 
   .avatar { margin: 0 auto; }
 }
+.poster {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  display: block;
+}
