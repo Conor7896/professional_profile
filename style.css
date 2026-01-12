@@ -140,3 +140,14 @@ h1 { margin: 0 0 8px; font-size: 40px; }
   background: rgba(255,255,255,0.04);
   display: block;
 }
+.scholar-link {
+  color: #1a73e8;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.scholar-link:hover {
+  color: #0b4fa3;
+  text-decoration: none;
+}
