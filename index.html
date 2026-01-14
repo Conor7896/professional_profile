@@ -23,23 +23,23 @@
 
   <main class="wrap">
     <section class="hero">
-      <img class="avatar" src="images/vaam_poster.jpg" alt="Portrait of Conor Glackin" />
+      <!-- Make profile photo clickable in the same lightbox -->
+      <img class="avatar lightboxable" src="images/vaam_poster.jpg" alt="Portrait of Conor Glackin" />
+
       <div>
         <h1>Conor Glackin</h1>
         <p class="lead">
           Data Scientist with a PhD in statistics-driven environmental microbiology,
           specialising in machine-learning models for genomic and environmental data.
         </p>
-       <p class="links">
-  <a href="https://github.com/Conor7896" target="_blank" rel="noopener">GitHub</a>
-  <span>•</span>
-  <a href="https://www.linkedin.com/in/conor-glackin-30a525185/" target="_blank" rel="noopener">LinkedIn</a>
-  <span>•</span>
-  <span>glackinconor@yahoo.com</span>
-  <span>•</span>
-  <a href="images/CG_CV_25.pdf" target="_blank" rel="noopener">CV</a>
-</p>
 
+        <!-- Remove the bullet spans (your CSS hides most spans, which can make the email look "missing") -->
+        <p class="links">
+          <a href="https://github.com/Conor7896" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/conor-glackin-30a525185/" target="_blank" rel="noopener">LinkedIn</a>
+          <span>glackinconor@yahoo.com</span>
+          <a href="images/CG_CV_25.pdf" target="_blank" rel="noopener">CV</a>
+        </p>
       </div>
     </section>
 
@@ -49,15 +49,15 @@
         Decided to make this since I am in need of a job and since I don't post on LinkedIn wanted somewhere to hold all this information.
         I am a data scientist with a PhD (PhD defense pending) in environmental microbiology and a strong academic background
         in mathematics, probability, and statistics. My work focuses on applying machine-learning methods
-        to complex environmental, and in the past, pharmaceutical datasets, with particular expertise in 
+        to complex environmental, and in the past, pharmaceutical datasets, with particular expertise in
         time-series analysis and predictive modelling.
       </p>
       <p>
         I'm looking for a job in bioinformatics/data science. I am flexible on location. Although my expertise are now more environmentally/
-        biologically orientated (and I do particularly enjoy working with this type of data), this is definitely not a deal-breaker and I 
+        biologically orientated (and I do particularly enjoy working with this type of data), this is definitely not a deal-breaker and I
         would be open to delving back into my past experience in pharmaceuticals and genomics.
-        The main aspect I want is to be in a cutting-edge field, and 
-        use the skills I built up over the number few years data-science and statistics to drive cutting-edge and new, original results. 
+        The main aspect I want is to be in a cutting-edge field, and
+        use the skills I built up over the number few years data-science and statistics to drive cutting-edge and new, original results.
       </p>
     </section>
 
@@ -77,8 +77,48 @@
     <footer class="footer">© <span id="y"></span> Conor Glackin</footer>
   </main>
 
+  <!-- Lightbox (click image -> popup) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <img id="lightbox-img" alt="">
+  </div>
+
   <script>
+    // year in footer
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Lightbox
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".lightbox-close");
+
+    function openLightbox(src, alt){
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || "";
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+    }
+
+    function closeLightbox(){
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.src = "";
+    }
+
+    document.addEventListener("click", (e) => {
+      const img = e.target.closest("img.lightboxable");
+      if (img) openLightbox(img.src, img.alt);
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
   </script>
 </body>
 </html>
